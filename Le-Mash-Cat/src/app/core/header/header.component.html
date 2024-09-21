@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar *ngIf="notMobile; else mobile">
+    <ion-buttons slot="start">
+      <img src="assets/icon/logo.png" alt="Logo de l'entreprise" class="h-10 w-auto" >
+    </ion-buttons>
+      <ion-buttons slot="end">
+      <ion-button routerLink="/home">
+        Home
+      </ion-button>
+      <ion-button routerLink="/about">
+        About
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ng-template #mobile>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button menu="firstMenu"></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="h-10">
+        <img src="assets/icon/logo.png" alt="Logo de l'entreprise" class="h-10 w-auto top-0 absolute left-1/2 transform -translate-x-1/2" >
+      </ion-title>
+    </ion-toolbar>
+  </ng-template>
+</ion-header>
+
+<app-hamburger-menu></app-hamburger-menu>
+
+<ion-content id="main-content">
+  <ion-router-outlet></ion-router-outlet>
+</ion-content>

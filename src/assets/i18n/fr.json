@@ -5,5 +5,11 @@
       "HOME": "Accueil",
       "SCORE": "Scores"
     }
+  },
+  "HOME": {
+    "BANNER": {
+      "TITLE": "Bienvenue sur Cat Mash !",
+      "SUBTITLE": "Choisissez le chat le plus mignon"
+    }
   }
 }

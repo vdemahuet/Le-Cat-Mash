@@ -3,13 +3,18 @@ import { CommonModule } from '@angular/common';
 import {HeaderComponent} from "./header.component";
 import {IonicModule} from "@ionic/angular";
 import { HamburgerMenuComponent} from './hamburger-menu/hamburger-menu.component';
+import {TranslateModule} from "@ngx-translate/core";
+import {LanguageSwitcherComponent} from "./language-switcher/language-switcher.component";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
-  declarations: [HeaderComponent, HamburgerMenuComponent],
+  declarations: [HeaderComponent, HamburgerMenuComponent, LanguageSwitcherComponent],
   imports: [
     CommonModule,
-    IonicModule
+    FormsModule,
+    IonicModule,
+    TranslateModule
   ],
   exports: [HeaderComponent]
 })

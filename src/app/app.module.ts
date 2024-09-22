@@ -9,13 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HeaderModule} from "./components/core/header/header.module";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {HamburgerMenuComponent} from "./components/core/header/hamburger-menu/hamburger-menu.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HamburgerMenuComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),

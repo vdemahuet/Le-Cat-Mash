@@ -1,0 +1,12 @@
+:host {
+  justify-content: flex-start;
+  background-color: theme('colors.gray.100');
+  display: block;
+  overflow: auto;
+}
+
+@media screen and (max-width: 767px) {
+:host {
+  display: flex;
+}
+}

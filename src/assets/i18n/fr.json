@@ -10,6 +10,10 @@
     "BANNER": {
       "TITLE": "Bienvenue sur Cat Mash !",
       "SUBTITLE": "Choisissez le chat le plus mignon"
+    },
+    "CARDS": {
+      "NAME": "Nom: ",
+      "SCORE": "Score: "
     }
   }
 }

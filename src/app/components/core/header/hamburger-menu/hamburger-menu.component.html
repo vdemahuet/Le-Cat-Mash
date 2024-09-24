@@ -1,4 +1,4 @@
-<ion-menu side="start" menuId="firstMenu" contentId="main-content" class="absolute">
+<ion-menu side="start" menuId="firstMenu" contentId="main-content">
   <ion-header>
     <ion-toolbar>
       <ion-title>{{ 'HEADER.MENU' | translate }}</ion-title>
@@ -6,8 +6,8 @@
   </ion-header>
   <ion-content>
     <ion-list>
-      <ion-item [routerLink]="['/']">{{ 'HEADER.TABS.HOME' | translate }}</ion-item>
-      <ion-item [routerLink]="['/scores']">{{ 'HEADER.TABS.SCORE' | translate }}</ion-item>
+      <ion-item (click)="navigateTo('/')" class="cursor-pointer">{{ 'HEADER.TABS.HOME' | translate }}</ion-item>
+      <ion-item (click)="navigateTo('/scores')" class="cursor-pointer">{{ 'HEADER.TABS.SCORE' | translate }}</ion-item>
     </ion-list>
   </ion-content>
 </ion-menu>

@@ -15,6 +15,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
+    console.log("TOTOTOTO");
     this.loadCats();
   }
 

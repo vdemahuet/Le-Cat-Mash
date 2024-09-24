@@ -6,6 +6,7 @@ import { HamburgerMenuComponent} from './hamburger-menu/hamburger-menu.component
 import {TranslateModule} from "@ngx-translate/core";
 import {LanguageSwitcherComponent} from "./language-switcher/language-switcher.component";
 import {FormsModule} from "@angular/forms";
+import {RouterModule} from "@angular/router";
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import {FormsModule} from "@angular/forms";
   imports: [
     CommonModule,
     FormsModule,
+    RouterModule,
     IonicModule,
     TranslateModule
   ],

@@ -4,10 +4,10 @@
       <img src="/assets/icon/logo.png" alt="Logo de l'entreprise" class="h-10 w-auto" >
     </ion-buttons>
       <ion-buttons slot="end">
-      <ion-button href="/">
+      <ion-button [routerLink]="['/']">
         {{ 'HEADER.TABS.HOME' | translate }}
       </ion-button>
-      <ion-button href="/scores">
+      <ion-button [routerLink]="['/scores']">
         {{ 'HEADER.TABS.SCORE' | translate }}
       </ion-button>
         <app-language-switcher></app-language-switcher>

@@ -15,5 +15,14 @@
       "NAME": "Nom: ",
       "SCORE": "Score: "
     }
+  },
+  "SCORES": {
+    "LIST": {
+      "ITEM": {
+        "SCORE": "Score: ",
+        "NAME": "Name: ",
+        "NONAME": "[Sans Nom]"
+      }
+    }
   }
 }

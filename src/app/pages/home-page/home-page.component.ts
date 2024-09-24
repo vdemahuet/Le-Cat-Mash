@@ -48,7 +48,7 @@ export class HomePageComponent  implements OnInit {
   public updateCat(index: number | null): void {
     if(index !== null) {
       const selectedCat = this.catsList.find((cat: CatModel) => cat.index === index);
-      if (selectedCat && selectedCat.index) {
+      if (selectedCat) {
         this.store.dispatch(updateCat({
           index: selectedCat.index,
           changes: {score: selectedCat.score + 1}

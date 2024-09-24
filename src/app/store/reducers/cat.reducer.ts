@@ -7,7 +7,6 @@ export const initialState: CatModel[] = [];
 const _catReducer = createReducer(
   initialState,
   on(setCats, (state, { cats }) => {
-    console.log("reducer");
     return [...cats];
   }),
   on(updateCat, (state, { index, changes }) => {

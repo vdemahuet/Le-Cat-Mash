@@ -1,0 +1,24 @@
+ <ion-item class="ion-no-padding p-2 border-b flex justify-between" lines="none">
+      <div class="flex justify-between w-full items-center">
+        <img [src]="cat.url" class="h-20 w-20 rounded-md shadow-lg object-cover">
+        <div class="text-center">
+          <div class="text-sm">{{"SCORES.LIST.ITEM.SCORE" | translate}}</div>
+          <div class="text-lg">{{cat.score}}</div>
+        </div>
+        <div class="text-center">
+          <div class="text-sm">{{"SCORES.LIST.ITEM.NAME" | translate}}</div>
+          <div class="text-lg" *ngIf="cat.name; else noName">{{cat.name}}</div>
+          <ng-template #noName><span class="text-gray-400">{{"SCORES.LIST.ITEM.NONAME" | translate}}</span></ng-template>
+        </div>
+        <div class="flex space-x-2">
+          <div class="ion-activatable ripple-parent relative flex items-center justify-center p-1 rounded-full overflow-hidden">
+            <ion-icon name="pencil-outline" class="text-xl cursor-pointer"></ion-icon>
+            <ion-ripple-effect></ion-ripple-effect>
+          </div>
+          <div class="ion-activatable ripple-parent relative flex items-center justify-center p-1 rounded-full overflow-hidden">
+             <ion-icon name="trash-outline" class="text-xl cursor-pointer"></ion-icon>
+            <ion-ripple-effect></ion-ripple-effect>
+          </div>
+        </div>
+      </div>
+    </ion-item>

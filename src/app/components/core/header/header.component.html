@@ -1,13 +1,13 @@
-<ion-header class="px-0 md:px-4">
+<ion-header class="px-0 md:px-4 bg-white">
   <ion-toolbar *ngIf="notMobile; else mobile">
     <ion-buttons slot="start">
       <img src="/assets/icon/logo.png" alt="Logo de l'entreprise" class="h-10 w-auto" >
     </ion-buttons>
       <ion-buttons slot="end">
-      <ion-button href="/">
+      <ion-button [routerLink]="['/']">
         {{ 'HEADER.TABS.HOME' | translate }}
       </ion-button>
-      <ion-button href="/scores">
+      <ion-button [routerLink]="['/scores']">
         {{ 'HEADER.TABS.SCORE' | translate }}
       </ion-button>
         <app-language-switcher></app-language-switcher>
@@ -28,6 +28,5 @@
   </ng-template>
 </ion-header>
 
-<app-hamburger-menu></app-hamburger-menu>
 
 

@@ -1,6 +1,8 @@
-<ion-app>
-  <app-header/>
+<ion-app class="flex flex-col min-h-screen ">
+  <app-header class="fixed top-0 z-10 w-full"/>
   <ion-content id="main-content">
-  <ion-router-outlet></ion-router-outlet>
-</ion-content>
+    <ion-router-outlet></ion-router-outlet>
+  </ion-content>
 </ion-app>
+
+<app-hamburger-menu></app-hamburger-menu>

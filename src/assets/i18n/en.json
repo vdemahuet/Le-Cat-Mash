@@ -5,5 +5,11 @@
       "HOME": "Home",
       "SCORE": "Scores"
     }
+  },
+  "HOME": {
+    "BANNER": {
+      "TITLE": "Welcome to Cat Mash !",
+      "SUBTITLE": "Choose the cutest cat"
+    }
   }
 }

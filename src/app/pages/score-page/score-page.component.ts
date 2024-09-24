@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Store} from "@ngrx/store";
+import {CatModel} from "../../store/models/cat.model";
+import {selectAllCats} from "../../store/selectors/cat.selector";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-score-page',
@@ -7,8 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScorePageComponent  implements OnInit {
 
-  constructor() { }
+  cats$!: Observable<CatModel[]>;
 
-  ngOnInit() {}
+  constructor(private store: Store) { }
+
+  ngOnInit() {
+    this.cats$ = this.store.select(selectAllCats);
+  }
 
 }

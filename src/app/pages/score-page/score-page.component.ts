@@ -3,6 +3,7 @@ import {Store} from "@ngrx/store";
 import {CatModel} from "../../store/models/cat.model";
 import {selectAllCats} from "../../store/selectors/cat.selector";
 import {Observable} from "rxjs";
+import {deleteCat} from "../../store/actions/cat.actions";
 
 @Component({
   selector: 'app-score-page',
@@ -17,6 +18,10 @@ export class ScorePageComponent  implements OnInit {
 
   ngOnInit() {
     this.cats$ = this.store.select(selectAllCats);
+  }
+
+  public deleteCat(id: string): void {
+    this.store.dispatch(deleteCat({id}));
   }
 
 }

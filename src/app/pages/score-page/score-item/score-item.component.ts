@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {CatModel} from "../../../store/models/cat.model";
 
 
@@ -10,9 +10,14 @@ import {CatModel} from "../../../store/models/cat.model";
 export class ScoreItemComponent  implements OnInit {
 
   @Input() cat!: CatModel;
+  @Output() deleteCatEvent: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {}
+
+  public deleteCat() {
+  this.deleteCatEvent.emit(this.cat.id);
+  }
 
 }

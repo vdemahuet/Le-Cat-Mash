@@ -12,3 +12,8 @@ export const setCats = createAction(
   '[Cat] Set Cats',
   props<{ cats: CatModel[] }>()
 );
+
+export const deleteCat = createAction(
+  '[Cat] Delete Cat',
+  props<{id: string}>()
+)

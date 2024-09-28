@@ -9,8 +9,8 @@ const _catReducer = createReducer(
   on(setCats, (state, { cats }) => {
     return [...cats];
   }),
-  on(updateCat, (state, { index, changes }) => {
-    return state.map(cat => cat.index === index ? { ...cat, ...changes } : cat);
+  on(updateCat, (state, { id, changes }) => {
+    return state.map(cat => cat.id === id ? { ...cat, ...changes } : cat);
   }),
   on(deleteCat, (state, {id}) => {
     const newState = [...state];

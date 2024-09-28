@@ -3,7 +3,9 @@ import {Store} from "@ngrx/store";
 import {CatModel} from "../../store/models/cat.model";
 import {selectAllCats} from "../../store/selectors/cat.selector";
 import {Observable} from "rxjs";
-import {deleteCat} from "../../store/actions/cat.actions";
+import {deleteCat, updateCat} from "../../store/actions/cat.actions";
+import {ScoreItemEvent} from "../../interfaces/models/score-item-event";
+import {ScoreItemEnum} from "../../interfaces/enums/score-item-enum";
 
 @Component({
   selector: 'app-score-page',
@@ -20,8 +22,14 @@ export class ScorePageComponent  implements OnInit {
     this.cats$ = this.store.select(selectAllCats);
   }
 
-  public deleteCat(id: string): void {
-    this.store.dispatch(deleteCat({id}));
+  public handleEvent(itemEvent: ScoreItemEvent): void {
+    switch (itemEvent.event) {
+      case ScoreItemEnum.DELETE:
+        this.store.dispatch(deleteCat({id: itemEvent.value.id}));
+        break;
+      case ScoreItemEnum.EDIT:
+        this.store.dispatch(updateCat({id: itemEvent.value.id, changes: {name: itemEvent.value.name}}))
+    }
   }
 
 }

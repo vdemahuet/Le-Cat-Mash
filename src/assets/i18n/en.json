@@ -8,8 +8,21 @@
   },
   "HOME": {
     "BANNER": {
-      "TITLE": "Welcome to Cat Mash !",
+      "TITLE": "Welcome to Cat Mash!",
       "SUBTITLE": "Choose the cutest cat"
+    },
+    "CARDS": {
+      "NAME": "Name: ",
+      "SCORE": "Score: "
+    }
+  },
+  "SCORES": {
+    "LIST": {
+      "ITEM": {
+        "SCORE": "Score: ",
+        "NAME": "Name: ",
+        "NONAME": "[No Name]"
+      }
     }
   }
 }

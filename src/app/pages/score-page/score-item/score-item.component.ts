@@ -1,5 +1,8 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {CatModel} from "../../../store/models/cat.model";
+import {FormControl, FormGroup} from "@angular/forms";
+import {ScoreItemEvent} from "../../../interfaces/models/score-item-event";
+import {ScoreItemEnum} from "../../../interfaces/enums/score-item-enum";
 
 
 @Component({
@@ -10,14 +13,27 @@ import {CatModel} from "../../../store/models/cat.model";
 export class ScoreItemComponent  implements OnInit {
 
   @Input() cat!: CatModel;
-  @Output() deleteCatEvent: EventEmitter<string> = new EventEmitter();
+  @Output() catEvent: EventEmitter<ScoreItemEvent> = new EventEmitter();
 
-  constructor() { }
+  public isEditable: boolean = false;
+  public myForm!: FormGroup;
 
-  ngOnInit() {}
+  constructor() {
+  }
+
+  ngOnInit() {
+     this.myForm = new FormGroup({
+      name: new FormControl(''),
+    });
+  }
 
   public deleteCat() {
-  this.deleteCatEvent.emit(this.cat.id);
+    this.catEvent.emit({event: ScoreItemEnum.DELETE, value: this.cat});
+  }
+
+  public edit() {
+    this.catEvent.emit({event: ScoreItemEnum.EDIT, value: {...this.cat, name: this.myForm.value.name}})
+    this.isEditable = false;
   }
 
 }

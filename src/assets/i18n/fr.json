@@ -21,7 +21,8 @@
       "ITEM": {
         "SCORE": "Score: ",
         "NAME": "Name: ",
-        "NONAME": "[Sans Nom]"
+        "NONAME": "[Sans Nom]",
+        "EDIT": "Editer"
       }
     }
   }

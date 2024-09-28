@@ -50,7 +50,7 @@ export class HomePageComponent  implements OnInit {
       const selectedCat = this.catsList.find((cat: CatModel) => cat.index === index);
       if (selectedCat) {
         this.store.dispatch(updateCat({
-          index: selectedCat.index,
+          id: selectedCat.id,
           changes: {score: selectedCat.score + 1}
         }));
         this.selectRandomCats();

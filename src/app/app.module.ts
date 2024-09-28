@@ -15,9 +15,18 @@ import {catReducer} from "./store/reducers/cat.reducer";
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {EffectsModule} from '@ngrx/effects';
 import {CatEffects} from "./store/effects/cats.effect";
+import {localStorageSync} from "ngrx-store-localstorage";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
+export function localStorageSyncReducer(reducer: any): any {
+  return localStorageSync({
+    keys: ['cats'],
+    rehydrate: true,
+    storage: sessionStorage
+  })(reducer);
 }
 
 @NgModule({
@@ -28,7 +37,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     HeaderModule,
     HttpClientModule,
-     StoreModule.forRoot({ cats: catReducer }),
+     StoreModule.forRoot({ cats: catReducer }, {metaReducers: [localStorageSyncReducer]}),
     StoreDevtoolsModule.instrument({ maxAge: 10 }),
     TranslateModule.forRoot({
       loader: {

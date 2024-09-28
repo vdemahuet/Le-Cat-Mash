@@ -5,6 +5,7 @@ import {ScorePageRoutingModule} from "./score-page.routing.module";
 import {IonicModule} from "@ionic/angular";
 import {TranslateModule} from "@ngx-translate/core";
 import {ScoreItemComponent} from "./score-item/score-item.component";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {ScoreItemComponent} from "./score-item/score-item.component";
     CommonModule,
     ScorePageRoutingModule,
     IonicModule,
-    TranslateModule
+    TranslateModule,
+    ReactiveFormsModule
   ],
   exports: [ScorePageComponent]
 })

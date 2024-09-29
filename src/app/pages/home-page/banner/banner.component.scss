@@ -2,3 +2,16 @@
 .cm-container {
   background: linear-gradient(to top right, #6CBFFF, #1C80CC);
 }
+
+.chevron {
+   animation: bounce 0.8s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Position de départ et de fin */
+  }
+  50% {
+    transform: translateY(-10px); /* Vers le haut */
+  }
+}

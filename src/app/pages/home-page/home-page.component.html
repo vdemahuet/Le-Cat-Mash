@@ -1,5 +1,5 @@
 <app-banner class="h-1/4 md:h-full"></app-banner>
-<ion-row *ngIf="randomCats.length > 0" class="h-3/4 py-4 px-4 gap-5 md:gap-0 md:pt-10 md:flex md:px-10 justify-center md:h-full md:pb-12">
+<ion-row *ngIf="randomCats.length > 0" class="h-3/4 py-4 px-4 gap-5 md:gap-0 md:pt-10 md:flex md:px-10 justify-center md:h-full md:pb-12" id="targetScroll">
   <app-cat-card [info]="randomCats[0]" (click)="updateCat(randomCats[0].index)" class="w-full md:w-1/2"></app-cat-card>
   <app-cat-card [info]="randomCats[1]" (click)="updateCat(randomCats[1].index)" class="w-full md:w-1/2"></app-cat-card>
 </ion-row>

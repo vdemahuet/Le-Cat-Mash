@@ -11,4 +11,11 @@ export class BannerComponent  implements OnInit {
 
   ngOnInit() {}
 
+  public scrollTo() {
+    const targetScrollElement = document.getElementById('targetScroll');
+    if (targetScrollElement) {
+      targetScrollElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
 }

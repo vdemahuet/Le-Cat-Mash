@@ -7,3 +7,8 @@ export const selectAllCats = createSelector(
   selectCatsState,
   (cats: CatModel[]) => cats
 );
+
+export const selectAllCatsSort = createSelector(
+  selectCatsState,
+  (cats: CatModel[]) => [...cats].sort((a: CatModel, b: CatModel) => b.score - a.score)
+);

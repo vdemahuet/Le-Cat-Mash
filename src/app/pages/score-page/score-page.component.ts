@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Store} from "@ngrx/store";
 import {CatModel} from "../../store/models/cat.model";
-import {selectAllCats} from "../../store/selectors/cat.selector";
+import {selectAllCatsSort} from "../../store/selectors/cat.selector";
 import {Observable} from "rxjs";
 import {deleteCat, updateCat} from "../../store/actions/cat.actions";
 import {ScoreItemEvent} from "../../interfaces/models/score-item-event";
@@ -21,7 +21,7 @@ export class ScorePageComponent  implements OnInit {
   constructor(private store: Store, private toastService: ToastService, private translate: TranslateService) { }
 
   ngOnInit() {
-    this.cats$ = this.store.select(selectAllCats);
+    this.cats$ = this.store.select(selectAllCatsSort);
   }
 
   public async handleEvent(itemEvent: ScoreItemEvent): Promise<void> {

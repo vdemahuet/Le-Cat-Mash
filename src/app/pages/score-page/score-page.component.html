@@ -1,4 +1,4 @@
-<div class="min-h-screen bg-gray-100 px-6 md:px-36 py-6">
+<div class="bg-gray-100 px-6 md:px-36 py-6">
   <ion-list class="border-2 border-gray-300 p-0">
    <app-score-item *ngFor="let cat of cats$ | async" [cat]="cat" (catEvent)="handleEvent($event)"></app-score-item>
   </ion-list>

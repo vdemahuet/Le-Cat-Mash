@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ScreenSizeService} from "../../../services/screen-size.service";
+import {ScreenSizeService} from "../../../services/screen-size/screen-size.service";
 import {Subscription} from "rxjs";
 
 @Component({

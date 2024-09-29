@@ -21,7 +21,13 @@
       "ITEM": {
         "SCORE": "Score: ",
         "NAME": "Name: ",
-        "NONAME": "[No Name]"
+        "NONAME": "[No Name]",
+        "PLACEHOLDER": "Enter the name",
+        "EDIT": "Edit",
+        "ACTION_MESSAGE": {
+          "DELETE": "The cat has been deleted",
+          "EDIT": "The name has been changed"
+        }
       }
     }
   }

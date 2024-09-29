@@ -22,7 +22,12 @@
         "SCORE": "Score: ",
         "NAME": "Name: ",
         "NONAME": "[Sans Nom]",
-        "EDIT": "Editer"
+        "PLACEHOLDER": "Entrez le nom",
+        "EDIT": "Editer",
+        "ACTION_MESSAGE" : {
+          "DELETE": "Le chat a été supprimé",
+          "EDIT": "Le nom a été changé"
+        }
       }
     }
   }

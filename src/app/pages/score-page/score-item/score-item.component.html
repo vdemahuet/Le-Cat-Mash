@@ -14,7 +14,7 @@
           <ng-template #editable>
             <form [formGroup]="myForm" (ngSubmit)="edit()">
               <ion-item lines="none">
-                <ion-input formControlName="name" class="bg-gray-200 autofocus pl-1 w-20 md:w-full text-sm md:text-base" type="text" placeholder="Entrez votre nom"></ion-input>
+                <ion-input formControlName="name" [class]="{'bg-red-200': isNameInvalid}" class="bg-gray-200 autofocus pl-1 w-20 md:w-full text-sm md:text-base" type="text" [placeholder]="'SCORES.LIST.ITEM.PLACEHOLDER' | translate"></ion-input>
                 <ion-button type="submit" fill="outline" color="dark" class="ml-2 text-xs md:text-sm">{{"SCORES.LIST.ITEM.EDIT" | translate}}</ion-button>
               </ion-item>
               </form>
